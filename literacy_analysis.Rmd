@@ -1,15 +1,13 @@
 ---
-title: "Understanding the Impact of Rural Female Literacy on Key Socio-Health Indicators
-  in India"
+title: "Understanding the Impact of Rural Female Literacy on Key Socio-Health Indicators in India"
 author: "Aleena Santhosh"
 output:
+  github_document: default
   html_document:
-    df_print: paged
-editor_options:
-  chunk_output_type: console
-header-includes:
-- \usepackage{fvextra}
-- \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+    toc: true
+    theme: cosmo
+
+always_allow_html: true
 ---
 
 ```{r, include = FALSE}
@@ -294,7 +292,7 @@ summary_table <- data.frame(
 library(kableExtra)
 
 summary_table %>%
-  kable(digits = 3, caption = "Regression Results Summary") %>%
+  kable(digits = 3, caption = "Regression Results Summary", format = "markdown") %>%
   kable_styling(latex_options = c("striped", "hold_position"))
 ```
 
